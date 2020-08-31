@@ -11,7 +11,7 @@ services:
     env_file:
       - './.env'
     environment:
-      POSTGRES_PASSWORD: 455701
+      POSTGRES_PASSWORD: DB_PASSWORD
   web:
     build: .
     restart: always
