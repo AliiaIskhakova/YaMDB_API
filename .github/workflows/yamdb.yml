@@ -37,5 +37,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: aliiaiskhakova/yamdb_final
+          repository: 39a785f638b7/yamdb_final
           tag_with_ref: true
