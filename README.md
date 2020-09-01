@@ -1,2 +1,2 @@
 # yamdb_final
-![yamdb_workflow](https://github.com/AliiaIskhakova/yamdb_final/workflows/yamdb/badge.svg)
+![](https://github.com/AliiaIskhakova/yamdb_final/workflows/workflow_yamdb/badge.svg)
