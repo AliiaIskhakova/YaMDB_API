@@ -10,28 +10,24 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - './.env'
-    environment:
-      POSTGRES_PASSWORD: 455701
   web:
     build: .
     restart: always
     command: gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
     volumes: 
       - ./static:/code/static
-      - ./media:/code/media
     depends_on:
       - db
     env_file:
       - './.env'
+    expose:
+      - 8000
   nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+    build: ./nginx
     depends_on:
       - web
     ports:
       - 80:80
     volumes:
-      - ./static:/code/static
-      - ./media:/code/media
+      - ./static:/home/app/web/static
 
