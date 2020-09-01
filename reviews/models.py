@@ -35,6 +35,6 @@ class Comment(models.Model):
         User, on_delete=models.CASCADE, related_name="comments")
     review = models.ForeignKey(
         Review, on_delete=models.CASCADE, related_name="comments")
-    
+
     def __str__(self):
         return "{:.50}".format(self.text)

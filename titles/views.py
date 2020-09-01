@@ -25,7 +25,7 @@ class CategoriesViewSet(BaseCreateListDestroyViewSet):
     serializer_class = CategorySerializer
     filter_backends = [filters.SearchFilter]
     permission_classes = [IsAdminOrAuthor, ]
-    search_fields = ['=name',]
+    search_fields = ['=name', ]
     lookup_field = 'slug'
 
 
@@ -34,7 +34,7 @@ class GenresViewSet(BaseCreateListDestroyViewSet):
     serializer_class = GenreSerializer
     filter_backends = [filters.SearchFilter]
     permission_classes = [IsAdminOrAuthor, ]
-    search_fields = ['=name',]
+    search_fields = ['=name', ]
     lookup_field = 'slug'
     
 
@@ -50,7 +50,3 @@ class TitlesViewSet(viewsets.ModelViewSet):
       
     def get_queryset(self):
         return Title.objects.annotate(rating=Avg('reviews__score')).all()
-   
-
-    
-        
