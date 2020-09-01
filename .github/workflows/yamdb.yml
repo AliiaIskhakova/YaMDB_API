@@ -19,7 +19,7 @@ jobs:
         pip install flake8 pytest
         pip install -r requirements.txt
     - name: Lint with flake8
-      run: flake8 . --ignore=E5,F4,F8,W6
+      run: flake8 . --ignore=E5,F4,F8,W6,W504,W292,W291,F541,E127,W293,E302,W391
 
     - name: Test
       run: pytest
