@@ -3,7 +3,6 @@ env/
 venv/
 .venv
 .venv/
-static/
 
 __pycache__/
 *.py[cod]
